@@ -4,22 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input type="text" class="pokemon-input">
-    <button class="get-image">get image</button>
+    <div class="input-container">
+        <input type="text" class="pokemon-input">
+        <button class="get-image">Get stats</button>
+    </div>
+   
     <br>
     <p class="error-message"></p>
 
     <div class="pokemon-card">
-        <img class="pokemon-image" src="" >
-        <p>hp : <span class="hp"></span> </p>
-        <p>abilities : <span class="abilities"></span> </p>
-        <p>type : <span class="type"></span> </p>
-        <p>speed : <span class="speed"> </span></p>
-        <p>defense :<span class="defense"></span></p>
-        <p>attack : <span class="attack"></span></p>
-    </div>
+            <img class="pokemon-image" src="">
+            <div class="stat">
+              <span class="label">HP</span>
+              <span class="hp"></span>
+            </div>
+        
+            <div class="stat">
+              <span class="label">Abilities</span>
+              <span class="abilities"></span>
+            </div>
+        
+            <div class="stat">
+              <span class="label">Type</span>
+              <span class="type"></span>
+            </div>
+        
+            <div class="stat">
+              <span class="label">Speed</span>
+              <span class="speed"></span>
+            </div>
+        
+            <div class="stat">
+              <span class="label">Defense</span>
+              <span class="defense"></span>
+            </div>
+        
+            <div class="stat">
+              <span class="label">Attack</span>
+              <span class="attack"></span>
+            </div>
+</div>
 
     
     <script src="./script.js"></script>

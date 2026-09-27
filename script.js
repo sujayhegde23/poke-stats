@@ -7,7 +7,7 @@ const defense = document.querySelector(".defense");
 const attack = document.querySelector(".attack");
 const hp = document.querySelector(".hp");
 const abilities = document.querySelector(".abilities");
-
+const card = document.querySelector('.pokemon-card')
 
 const errorDisplay = document.createElement('p');
 
@@ -23,7 +23,7 @@ function getPokemonFeatures(data){
 
         abilities.textContent = pokemonAbilities
           .map(item => item.ability.name)
-          .join(", ");
+          .join(" , ");
 
         hp.textContent = pokemonHp;
         type.textContent = pokemonType;
@@ -34,6 +34,7 @@ function getPokemonFeatures(data){
 }
 
 function handleError(error){
+        card.style.display ='none';
         errorDisplay.textContent = error.message;
         document.body.append(errorDisplay);
 }
@@ -42,18 +43,26 @@ searchButton.addEventListener('click',()=>{
     errorDisplay.textContent ="";
     image.src="";
     let pokemon = input.value.trim();
+   
+    if (pokemon === "") {
+        handleError(new Error("Please Enter a  Pokemon Name"))
+        return;
+    }
+    
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
 
         .then((response)=>{
 
             if(!response.ok){
-                throw new Error("Something went wrong....");
+                throw new Error("Pokemon Not Found....");
             }
             return response.json()
         })
 
         .then((data)=>{
            getPokemonFeatures(data);
+           card.style.display='flex';
+
         })
 
         .catch((error)=>{  
