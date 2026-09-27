@@ -2,7 +2,14 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-
+}
+h1{
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:linear-gradient(135deg, #904124, #77672f, #b6300a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 body{
     height: 100vh;
@@ -19,7 +26,7 @@ body{
     max-width: 400px;
     width: 100%;
     padding:20px;
-    background: linear-gradient(135deg, #fff8dc, #f6d365, #fda085);
+    background: linear-gradient(135deg, #e74409, #f6d365, #982a0c);
     border-radius: 10px;
     box-shadow: 2px 2px 4px 2px;
 }
@@ -28,10 +35,10 @@ img{
     width:150px;
     height: 150px;
     align-self: center;
-    border: 3px solid black;
     margin-bottom: 10px;
     border-radius: 4px;
-    background: #fffbe6;
+    background:linear-gradient(135deg , rgb(187, 26, 26) ,rgb(135, 35, 52),rgb(52, 6, 6));
+    box-shadow: 2px 2px 5px 4px;
 }
 
 
@@ -67,4 +74,10 @@ button{
 
 p{
     color: crimson;
+}
+
+.statvalue{
+    color: rgb(165, 12, 12);
+    font-weight: bold;
+    font-size: medium;
 }
