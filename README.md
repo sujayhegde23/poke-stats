@@ -1,3 +1,3 @@
 # Demo
 
-[View Project](https://sujayhegde23.github.io/poke-stats/)
+[View](https://sujayhegde23.github.io/poke-stats/)
