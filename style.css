@@ -6,7 +6,7 @@
 h1{
     margin-bottom: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background:linear-gradient(135deg, #904124, #77672f, #b6300a);
+    background:linear-gradient(135deg, #e04f1b, #e8bf28, #e7491d);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(242, 229, 229);
+     background:linear-gradient(135deg, #000000, #4b4016, #482e27);
 }
 .pokemon-card{
     border: 5px solid black;
@@ -59,17 +59,21 @@ img{
     border: 2px solid black;
     padding:4px;
     width:250px;
-    border-radius: 2px;
-    font-size: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family:monospace;
     font-weight: bold;
+    color:#ded416;
+    background:linear-gradient(135deg , rgb(187, 26, 26) ,rgb(135, 35, 52),rgb(52, 6, 6));
 }
 button{
-    padding:4px;
-    border: 2px solid rgb(142, 84, 84);
+    padding:6px;
+    border: 2px solid rgb(34, 10, 10);
     border-radius:4px ;
     font-weight: bold;
-    color:yellow;
-    background-color: black;
+    color:rgb(199, 199, 19);
+    background-color: rgb(156, 25, 25);
+    cursor: pointer;
 }
 
 p{
