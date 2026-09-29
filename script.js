@@ -17,7 +17,7 @@ const errorDisplay = document.createElement('p');
 
 
 function getPokemonFeatures(data){
-        const pokemonType = data.types[0].type.name;
+        const pokemonType = data.types;
         const pokemonHp = data.stats.find(s=>s.stat.name === 'hp').base_stat;
         const pokemonSpeed = data.stats.find(s=>s.stat.name === 'speed').base_stat;
         const pokemonAttack =data.stats.find(s=>s.stat.name === 'attack').base_stat;
@@ -27,13 +27,14 @@ function getPokemonFeatures(data){
         console.log(pokemonSpecialDefence);
         
         let pokemonAbilities = data.abilities;
-
+        
         abilities.textContent = pokemonAbilities
           .map(item => item.ability.name)
           .join(" , ");
 
-        hp.textContent = pokemonHp;
-        type.textContent = pokemonType;
+        type.textContent = pokemonType.map(item=>item.type.name).join(' , ');
+
+        hp.textContent = pokemonHp;        
         speed.textContent = pokemonSpeed;
         attack.textContent = pokemonAttack;
         defense.textContent = pokemnDefence;
