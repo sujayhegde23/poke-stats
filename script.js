@@ -7,7 +7,11 @@ const defense = document.querySelector(".defense");
 const attack = document.querySelector(".attack");
 const hp = document.querySelector(".hp");
 const abilities = document.querySelector(".abilities");
-const card = document.querySelector('.pokemon-card')
+const card = document.querySelector('.pokemon-card');
+const specialAttack = document.querySelector('.special-attack');
+const specialDefence = document.querySelector('.special-defense');
+
+
 
 const errorDisplay = document.createElement('p');
 
@@ -18,7 +22,10 @@ function getPokemonFeatures(data){
         const pokemonSpeed = data.stats.find(s=>s.stat.name === 'speed').base_stat;
         const pokemonAttack =data.stats.find(s=>s.stat.name === 'attack').base_stat;
         const pokemnDefence = data.stats.find(s=>s.stat.name === 'defense').base_stat;
-
+        const pokemonSpecialAttack = data.stats.find(s=>s.stat.name === 'special-attack').base_stat;
+        const pokemonSpecialDefence = data.stats.find(s=>s.stat.name === 'special-defense').base_stat;
+        console.log(pokemonSpecialDefence);
+        
         let pokemonAbilities = data.abilities;
 
         abilities.textContent = pokemonAbilities
@@ -31,6 +38,9 @@ function getPokemonFeatures(data){
         attack.textContent = pokemonAttack;
         defense.textContent = pokemnDefence;
         image.src = data.sprites.front_default;
+        specialAttack.textContent = pokemonSpecialAttack;
+        specialDefence.textContent = pokemonSpecialDefence;
+        
 }
 
 function handleError(error){
