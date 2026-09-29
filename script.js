@@ -50,7 +50,7 @@ function handleError(error){
         document.body.append(errorDisplay);
 }
 
-searchButton.addEventListener('click',()=>{
+function makeAPICall(){
     errorDisplay.textContent ="";
     image.src="";
     let pokemon = input.value.trim();
@@ -79,4 +79,16 @@ searchButton.addEventListener('click',()=>{
         .catch((error)=>{  
             handleError(error);
         })
+}
+
+searchButton.addEventListener('click',()=>{
+    makeAPICall();
+   
+})
+
+
+input.addEventListener('keydown',(event)=>{
+    if(event.key === 'Enter'){
+        makeAPICall();
+    }
 })
